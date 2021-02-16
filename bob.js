@@ -2,9 +2,9 @@ class Bob {
   constructor(x, y, radius) {
     var options = {
         'isStatic':false,
-        'restitution':1.3,
+        'restitution':1.25,
         'friction':0,
-        'density':1
+        'density':0
     }
     this.x = x
     this.y = y
@@ -16,12 +16,9 @@ class Bob {
   }
   display(){
     var pos =this.body.position;
-    //pos.x = mouseX;
-    //pos.y = mouseY;
-    //var angle = this.body.angle;
+    
     push();
     translate(pos.x, pos.y);
-    //rotate(angle);
     
     fill("green");
     strokeWeight(3)
